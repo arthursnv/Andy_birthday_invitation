@@ -2,7 +2,7 @@
 <html lang="">
 <head>
   <title>Andy's Birthday Invitation</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <style>
     html, body {
       margin: 0;
@@ -14,152 +14,74 @@
       display: flex;
       position: absolute;
       /*display: inline-block;*/
-
+      margin-top: 65px;
       justify-content: center;
       align-items: center;
     }
     .image-container img {
       max-width: 100%;
-      max-height: 100%;
+      /*max-height: 100%;*/
       background-color: #172f46;
     }
-
-    img {
-      border: solid 1px #FFFFFF;
-      border-radius: 25px;
+    .carousel {
+      max-height: 350px;
+      background-color: #172f46;
     }
-
-    /*for images slide show*/
-    .toast {
-      max-width: 100%;
-      max-height: 100%;
-      position: absolute;
-      bottom: 15%;
-      right: 23%;
-      z-index: 999;
-
-      background-color: #fff;
-      color: #fff;
-      border-radius: 24px;
-      cursor: pointer;
-      animation: fadeIn 0.5s ease-in;
-
-      display: flex;
-      /*display: inline-block;*/
-
-      justify-content: center;
-      align-items: center;
+    .carousel-inner {
+      max-height: 350px;
+      margin-left: 25px;
+      margin-right: 25px;
     }
-    .toast img {
-      width: 96px;
-      height: 96px;
-      border-radius: 25px;
-      padding: 0;
-      margin: 0;
-    }
-    .slideshow-container {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 9999;
-      /*text-align: center;*/
-      width: 300px; /* Adjust the width as needed */
-      height: 500px; /* Adjust the height as needed */
-      overflow: hidden;
-    }
-    .slideshow-image {
-      width: 100%;
+    .carousel-item img {
+      width: 30%;
       height: 100%;
-      display: inline-block;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
-    .slideshow-image.active {
-      opacity: 1;
-    }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+      margin-right: 10px;
     }
   </style>
 </head>
 <body>
 <div class="image-container">
-  <img src="lib/images/wepik-hand-drawn-colorful-cat-birthday-party-square-invitation-202401261423054CTG.png" alt="Invitation Image">
+  <img src="lib/images/wepik-hand-drawn-colorful-cat-birthday-party-square-invitation-202401280728433HSp.jpeg" alt="Invitation Image">
 </div>
-<div id="toast" class="toast">
-  <img src="lib/images/square.jpeg" alt="Click on me">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="lib/images/birthday/2B426AE3-8488-44B3-8F1A-8EBBA64A3402.jpeg" alt="...">
+      <img src="lib/images/birthday/6D700A88-FA4C-45C7-976D-E02A557D78F6.jpeg" alt="...">
+      <img src="lib/images/birthday/6D439809-25EA-4D51-84D8-E1825B60794E.jpeg" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="lib/images/birthday/4821AD0E-1BE6-4F76-8C75-5AC14BEA5BB1.jpeg" alt="...">
+      <img src="lib/images/birthday/8640A1A6-C245-4E42-A680-5700FB04A5A0.jpeg" alt="...">
+      <img src="lib/images/birthday/36790BC4-BF4B-4182-94B9-CC12904CF825.jpeg" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="lib/images/birthday/341292B0-25F0-46FE-A0DF-B6C7FDF93F4E.jpeg" alt="...">
+      <img src="lib/images/birthday/7449409F-59CD-453C-8B60-1D2C36E74F4B.jpeg" alt="...">
+      <img src="lib/images/birthday/B6A19001-087E-4C6A-82EE-DFD35BC61621.jpeg" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="lib/images/birthday/BACC729C-B0AF-4EFF-A58C-8B0CA394A7BB.jpeg" alt="...">
+      <img src="lib/images/birthday/E7766391-2EDC-4B6B-B3F2-0D13682A9631.jpeg" alt="...">
+      <img src="lib/images/birthday/2B426AE3-8488-44B3-8F1A-8EBBA64A3402.jpeg" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
-
-<div id="slideshow" class="slideshow-container"></div>
-<script>
-  // for images slide show
-  var toast = document.getElementById('toast');
-  var slideshow = document.getElementById('slideshow');
-  var images = [
-          'lib/images/birthday/2B426AE3-8488-44B3-8F1A-8EBBA64A3402.jpeg',
-    'lib/images/birthday/6D700A88-FA4C-45C7-976D-E02A557D78F6.jpeg',
-    'lib/images/birthday/6D439809-25EA-4D51-84D8-E1825B60794E.jpeg',
-    'lib/images/birthday/4821AD0E-1BE6-4F76-8C75-5AC14BEA5BB1.jpeg',
-    'lib/images/birthday/8640A1A6-C245-4E42-A680-5700FB04A5A0.jpeg',
-    'lib/images/birthday/36790BC4-BF4B-4182-94B9-CC12904CF825.jpeg',
-    'lib/images/birthday/341292B0-25F0-46FE-A0DF-B6C7FDF93F4E.jpeg',
-    'lib/images/birthday/7449409F-59CD-453C-8B60-1D2C36E74F4B.jpeg',
-    'lib/images/birthday/B6A19001-087E-4C6A-82EE-DFD35BC61621.jpeg',
-    'lib/images/birthday/BACC729C-B0AF-4EFF-A58C-8B0CA394A7BB.jpeg',
-    'lib/images/birthday/E7766391-2EDC-4B6B-B3F2-0D13682A9631.jpeg',
-  ]; // Replace with your image URLs
-
-  toast.addEventListener('click', function() {
-    toggleSlideshow();
-  });
-
-  function toggleSlideshow() {
-    if (slideshow.style.display === 'none') {
-      startSlideshow();
-    } else {
-      stopSlideshow();
-    }
-  }
-
-  function startSlideshow() {
-    slideshow.style.display = 'block';
-    toast.style.display = 'none';
-
-    var currentIndex = 0;
-    var interval = setInterval(function() {
-      if (currentIndex === images.length) {
-        currentIndex = 0;
-      }
-
-      var image = document.createElement('img');
-      image.src = images[currentIndex];
-      image.className = 'slideshow-image';
-      slideshow.innerHTML = '';
-      slideshow.appendChild(image);
-      setTimeout(function() {
-        image.classList.add('active');
-      }, 100);
-      currentIndex++;
-    }, 2000); // Change slide duration as needed
-
-    slideshow.addEventListener('click', function() {
-      clearInterval(interval);
-      stopSlideshow();
-    });
-  }
-
-  function stopSlideshow() {
-    slideshow.style.display = 'none';
-    toast.style.display = 'block';
-  }
-</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
